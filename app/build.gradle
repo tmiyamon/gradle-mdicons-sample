@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.tmiyamon.mdicons'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.0"
+
+    defaultConfig {
+        applicationId "com.tmiyamon.sample"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+mdicons {
+    defcolor 'mycolor', '#9804d9'
+
+    assets {
+        nav {
+            densities "mdpi", "xxxhdpi"
+            colors "mycolor"
+            sizes  "18dp", "36dp"
+            names  "camera", "search"
+        }
+
+        toolbar {
+            colors "primary", "secondary" // defined in colors.xml
+            sizes  "18dp"
+            names  "home"
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.0'
+}
+
+
