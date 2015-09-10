@@ -21,12 +21,12 @@ android {
 }
 
 mdicons {
-    defcolor 'mycolor', '#9804d9'
+    defcolor 'mycolor', '#009688'
 
     assets {
         nav {
             densities "mdpi", "xxxhdpi"
-            colors "mycolor"
+            colors "mycolor", "white"
             sizes  "18dp", "36dp"
             names  "camera", "search"
         }
